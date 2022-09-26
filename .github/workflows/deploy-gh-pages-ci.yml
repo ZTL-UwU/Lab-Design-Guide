@@ -16,6 +16,7 @@ jobs:
         run: |
           npm install
           npm run build
+          echo "Add CNAME"
           echo "labui.js.org" >> CNAME
 
       - name: Deploy 🚀

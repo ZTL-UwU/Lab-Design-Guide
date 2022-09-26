@@ -17,7 +17,7 @@ jobs:
           npm install
           npm run build
           echo "Add CNAME"
-          echo "labui.js.org" >> CNAME
+          echo "labui.js.org" >> ./dist/CNAME
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1

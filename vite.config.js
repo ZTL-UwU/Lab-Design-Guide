@@ -6,9 +6,7 @@ export default defineConfig({
   server: {
     port: 5000,
   },
-  shared: {
-    base: './',
-  },
+  base: './',
   plugins: [
     svelte({
       preprocess: [preprocess()],

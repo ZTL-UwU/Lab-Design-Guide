@@ -68,7 +68,7 @@
 <main>
     <div class="item-15">
         <h1>Buttons</h1>
-        <LButton on:click={on_click_demo}>Demo</LButton>
+        <LButton on:click={ on_click_demo }>Demo</LButton>
         <LButton disabled>Disabled</LButton>
         <LButton>
             <strong>Strong</strong>

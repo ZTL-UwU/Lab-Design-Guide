@@ -2,7 +2,6 @@
 	import Router from "svelte-spa-router";
 	import routes from "./routes";
 	import { LNavBar } from "@ztl-uwu/labui";
-	console.log(routes);
 </script>
 
 <LNavBar />

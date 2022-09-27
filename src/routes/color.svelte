@@ -1,5 +1,4 @@
 <script>
-    import { LBox } from "@ztl-uwu/labui/main";
 </script>
 
 <h1>Color</h1>

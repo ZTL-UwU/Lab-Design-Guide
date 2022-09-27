@@ -1,2 +1,2 @@
-# Lab-Design-Guide
-Design Guide for LabUI
+# Lab Design Guide
+Documentation for Lab Design & [LabUI](https://github.com/ZTL-UwU/LabUI)

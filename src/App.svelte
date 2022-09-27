@@ -11,7 +11,7 @@
 
 <style>
 	main {
-		max-width: 900px;
+		max-width: 1100px;
 		margin-left: auto;
 		margin-right: auto;
 		padding-left: 100px;

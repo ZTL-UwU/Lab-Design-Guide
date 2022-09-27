@@ -2,6 +2,8 @@
 </script>
 
 <h1>Color</h1>
+<p>Lab Design uses vibrant and high saturation colors.</p>
+<p>LabUI provides the following colors. Follow them closely to get a consistent look.</p>
 
 <h2>Primary Colors</h2>
 <div class="color-card-holder">
@@ -72,7 +74,7 @@
 
     .color-secondary {
         position: relative;
-        height: 30px;
+        height: 32px;
     }
 
     .color-secondary.last {

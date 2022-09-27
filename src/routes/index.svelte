@@ -6,14 +6,14 @@
 <div class="banner">
     <img alt="banner" class="icon" src="./banner.png" />
     <br>
-	<LButton size="large" on:click={() => push('/demo')}>Demo</LButton>
+	<LButton size="large" on:click={() => push('/start/install')}>Getting Started</LButton>
+	<LButton color="grey" size="large" on:click={() => push('/demo')}>Demo</LButton>
 	<LButton size="large" on:click={() => push('/color')}>Color</LButton>
 </div>
 
 <style>
     .banner {
         text-align: center;
-        background-color: #f2f5fa;
         width: 100vw;
         position: absolute;
         top: 65px;
@@ -24,6 +24,6 @@
         width: 100%;
         max-width: 800px;
         margin-top: 50px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 </style>

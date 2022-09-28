@@ -103,10 +103,14 @@
     .comment {
         margin-top: 8px;
         margin-bottom: 8px;
+        user-select: none;
     }
 
     .color-card-holder {
         display: flex;
+        padding: 60px 60px 40px 60px;
+        background-color: $white3;
+        border-radius: $border-radius-large;
     }
 
     .color-card {

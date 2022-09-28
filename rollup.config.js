@@ -5,6 +5,7 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import preprocess from 'svelte-preprocess';
+import { string } from "rollup-plugin-string";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -59,6 +60,13 @@ export default {
 			dedupe: ['svelte']
 		}),
 		commonjs(),
+		string({
+			// Required to be specified
+			include: "**/*.md",
+
+			// Undefined by default
+			// exclude: ["**/index.html"]
+		}),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated

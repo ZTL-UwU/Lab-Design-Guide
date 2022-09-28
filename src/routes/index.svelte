@@ -8,7 +8,7 @@
     <br>
 	<LButton size="large" on:click={() => push('/start/install')}>Getting Started</LButton>
 	<LButton color="grey" size="large" on:click={() => push('/demo')}>Demo</LButton>
-	<LButton size="large" on:click={() => push('/color')}>Color</LButton>
+	<LButton size="large" on:click={() => push('/guide/color')}>Color</LButton>
 </div>
 
 <style>

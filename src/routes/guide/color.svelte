@@ -1,7 +1,9 @@
 <script>
+    import { LMDContainer } from "@ztl-uwu/labui";
+    import md from "./syntax_highlight.md";
 </script>
 
-<h1>Color</h1>
+<h1>Colors</h1>
 <p>Lab Design uses vibrant and high saturation colors.</p>
 <p>LabUI provides the following colors. Follow them closely to get a consistent look.</p>
 
@@ -75,7 +77,7 @@
     </div>
 </div>
 
-<div class="color-card-outer">
+<div class="color-card-outer" style="margin-bottom: 50px;">
     <h1>Grey</h1>
     <div class="color-card-holder">
         <div class="color-card-3 first">
@@ -113,7 +115,25 @@
     </div>
 </div>
 
-<h2>Color Aliases</h2>
+<div class="color-card-outer" style="margin-bottom: 50px;">
+    <h1>Border</h1>
+    <div class="color-card-holder">
+        <div class="color-card-3 first">
+            <div class="color-primary border1 white singal"><span class="color-id black-font">Cold Grey ①</span><span class="color-name black-font">#DCE0E6</span></div>
+            <p align="center" class="comment">Border ①</p>
+        </div>
+        <div class="color-card-3 middle">
+            <div class="color-primary border2 white singal"><span class="color-id black-font">Cold Grey ②</span><span class="color-name black-font">#B4B7BC</span></div>
+            <p align="center" class="comment">Border ②</p>
+        </div>
+        <div class="color-card-3 middle">
+            <div class="color-primary border3 white singal"><span class="color-id black-font">Cold Grey ③</span><span class="color-name black-font">#8D8F93</span></div>
+            <p align="center" class="comment">Border ③</p>
+        </div>
+    </div>
+</div>
+
+<LMDContainer content={ md }></LMDContainer>
 
 <style lang="scss">
     @import '../../styles/main.scss';
@@ -165,9 +185,11 @@
         height: 57.6px;
     }
 
-    .color-secondary.last,
-    .color-secondary-5.last,
-    .color-secondary-6.last {
+    .singal {
+        border-radius: 8px;
+    }
+
+    .last {
         border-radius: 0 0 8px 8px;
     }
 
@@ -315,4 +337,8 @@
         height: 55px;
     }
     .black { background-color: $black; }
+
+    .border1 { @include border-large($border1); }
+    .border2 { @include border-large($border2); }
+    .border3 { @include border-large($border3); }
 </style>

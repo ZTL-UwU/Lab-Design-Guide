@@ -16,5 +16,6 @@
 		margin-right: auto;
 		padding-left: 100px;
 		padding-right: 100px;
+		padding-bottom: 60px;
 	}
 </style>

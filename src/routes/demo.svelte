@@ -2,10 +2,10 @@
     import {
         LBox,
         LButton,
-        LIcon,
         LInput,
         LLink,
         LMask,
+        LMDContainer,
         LMessageBar,
         LNavBar,
         LNotification,
@@ -17,6 +17,8 @@
         LTabs,
         LTags,
     } from "@ztl-uwu/labui";
+    import * as code_demo from "./code_demo.js";
+    import { CircleX, Message, SquareX, Link, Tag } from "tabler-icons-svelte";
 
     let progress_demo_value = 10;
 
@@ -39,6 +41,9 @@
 
     let switch_demo_value = true;
     let switch_false_demo_value = 0;
+
+    let md_container_demo_value =
+        "## MD Container Demo\n\n- **LabUI** is _awesome_ `!!!`";
 
     function on_click_demo() {
         alert("Clicked");
@@ -68,7 +73,7 @@
 <main>
     <div class="item-15">
         <h1>Buttons</h1>
-        <LButton on:click={ on_click_demo }>Demo</LButton>
+        <LButton on:click={on_click_demo}>Demo</LButton>
         <LButton disabled>Disabled</LButton>
         <LButton>
             <strong>Strong</strong>
@@ -173,7 +178,7 @@
         <span slot="header"> Message Bars </span>
         <div slot="body">
             <LMessageBar color="green">
-                <LIcon name="message" slot="icon" />
+                <Message size="16" slot="icon" />
                 <span slot="title">Message</span>
                 <span slot="content">
                     More to describe ...
@@ -188,12 +193,12 @@
                     return false;
                 }}
             >
-                <LIcon name="circle-x" slot="icon" />
+                <CircleX size="16" slot="icon" />
                 <span slot="title">Error</span>
                 <span slot="content">Custom close handling.</span>
             </LMessageBar>
             <LMessageBar color="yellow" uncloseable type="dark">
-                <LIcon name="square-x" slot="icon" />
+                <SquareX size="16" slot="icon" />
                 <span slot="title">Warning</span>
                 <span slot="content">This message is not closable</span>
             </LMessageBar>
@@ -425,7 +430,7 @@
         <div slot="body">
             <div class="item-10">
                 <LLink href="https://github.com/zhangtianli2006/LabUI"
-                    ><LIcon name="link" /> Link to GitHub repo</LLink
+                    ><Link size=16 /> Link to GitHub repo</LLink
                 >
                 <br />
                 <LLink on:click={on_click_demo}>👇🏼 Catch on:click</LLink>
@@ -520,11 +525,11 @@
                 <span slot="text">Tag</span>
             </LTags>
             <LTags>
-                <i slot="icon" class="ti ti-tag"></i>
+                <Tag slot="icon" size=14 />
                 <span slot="text">Tag</span>
             </LTags>
             <LTags href="https://github.com/zhangtianli2006/LabUI">
-                <i slot="icon" class="ti ti-link"></i>
+                <Link slot="icon" size=14 />
                 <span slot="text">Linked</span>
             </LTags>
             <br>
@@ -569,12 +574,29 @@
             <LButton flat>Button</LButton>
         </LNotification>
     </div>
+
+    <LBox no_header>
+        <div slot="body">
+            <LMDContainer bind:content={md_container_demo_value} />
+            <LInput type="textarea" bind:value={md_container_demo_value} />
+        </div>
+    </LBox>
+
+    <LBox foldable folded="true" width="100%">
+        <div slot="header">MD Container</div>
+        <div slot="body">
+            <LMDContainer content={code_demo.cpp} />
+            <LMDContainer content={code_demo.css} />
+            <LMDContainer content={code_demo.markdown} />
+        </div>
+    </LBox>
+
     <!-- <LMask show={ show_cover } on:click={ on_click_demo }></LMask> -->
 </main>
 
 <style lang="scss">
-    main {
-        padding: 20px 0 50px 0;
+    h1, h2, h3 {
+        color: #454648;
     }
 
     .item-30 {

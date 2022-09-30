@@ -19,7 +19,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "@ztl-uwu/labui": "^0.1.8",
+    "@ztl-uwu/labui": "^0.1.82",
     "node-sass": "^7.0.3",
     "sirv-cli": "^2.0.0",
     "svelte-preprocess": "^4.10.7",

@@ -1,12 +1,13 @@
 <script>
     import { LInput, LLink } from "@ztl-uwu/labui";
     let demo_text = 'The quick brown fox jumps over the lazy dog';
+    let demo_text_code = '</> Fira Code !=->>++:=';
 </script>
 
 <h1>Typography</h1>
 
-<h2>Font</h2>
-<p>For English, we recommend using the font <LLink href="https://github.com/JulietaUla/Montserrat">Montserrat</LLink>. Here is a demo bellow.</p>
+<h2>Font Face</h2>
+<p>For Sans Latin font, we recommend using the <LLink href="https://github.com/JulietaUla/Montserrat">Montserrat</LLink>. Here is a demo bellow.</p>
 
 <div class="card-outer" style="margin-bottom: 50px;">
     <h1>Montserrat
@@ -108,8 +109,91 @@
     </div>
 </div>
 
+<p>For monospace / code font, we recommend using <LLink href="https://github.com/tonsky/FiraCode">Fira Code</LLink>. Here is a demo bellow.</p>
+
+<div class="card-outer" style="margin-bottom: 50px;">
+    <h1>Fira Code
+        <div style="float: right;">
+            <LInput width="400px" placeholder={demo_text_code} bind:value={demo_text_code}></LInput>
+        </div>
+    </h1>
+    <div class="card-holder">
+        <div class="font-box">
+            <div class="code font-name">
+                Regular
+            </div>
+            <div class="code regular">
+                {demo_text_code}
+            </div>
+        </div>
+        <div class="font-box">
+            <div class="code font-name">
+                Italic
+            </div>
+            <div class="code italic">
+                {demo_text_code}
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Font Styles</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Level</th>
+            <th>Size</th>
+            <th>Weight</th>
+            <th>Color</th>
+            <th>Demo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Main Title</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td><h1>Header</h1></td>
+        </tr>
+        <tr>
+            <td>Title</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td><h2>Header</h2></td>
+        </tr>
+        <tr>
+            <td>Small Title</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td><h3>Header</h3></td>
+        </tr>
+        <tr>
+            <td>Normal</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>Text</td>
+        </tr>
+        <tr>
+            <td>Small</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>Text</td>
+        </tr>
+    </tbody>
+</table>
+
 <style lang="scss">
     @import '../../styles/main.scss';
+
+    .code {
+        font-family: 'Fira Code';
+    }
 
     .card-outer {
         padding: 25px 60px 40px 60px;
@@ -142,4 +226,39 @@
     .bold { font-weight: 700; }
     .exbold { font-weight: 800; }
     .black { font-weight: 900; }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    thead {
+        background-color: #FAFAFA;
+    }
+
+    tbody {
+        text-align: center;
+    }
+
+    th {
+        padding: 15px;
+        border-bottom: 2px solid #8d8f93;
+    }
+
+    td {
+        border-top: 1.5px solid #dce0e6;
+        padding: 15px;
+    }
+
+    hr {
+        background-color: #b4b7bc;
+        height: 2px;
+        border: none;
+        margin: 20px 0 20px 0;
+    }
+
+    td > h1, td > h2, td > h3 {
+        margin: 0;
+    }
 </style>

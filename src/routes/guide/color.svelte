@@ -1,5 +1,6 @@
 <script>
-    import { LMDContainer } from "@ztl-uwu/labui";
+    import { LMDContainer, LButton } from "@ztl-uwu/labui";
+	import { push } from 'svelte-spa-router';
     import md from "./syntax_highlight.md";
 </script>
 
@@ -134,6 +135,8 @@
 </div>
 
 <LMDContainer content={ md }></LMDContainer>
+
+<LButton color="yellow" on:click={() => push('/guide/typography')}>Typography</LButton>
 
 <style lang="scss">
     @import '../../styles/main.scss';
